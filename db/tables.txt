@@ -1,0 +1,4 @@
+users
+categories
+sub_categories
+expenses
