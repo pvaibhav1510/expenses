@@ -78,3 +78,4 @@ webapp/WEB-INF/sun-web.xml
 enums/
 
 tomcat8/bin/.class_modified
+/exp-app/nbproject/private/
