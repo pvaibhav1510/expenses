@@ -79,3 +79,9 @@ enums/
 
 tomcat8/bin/.class_modified
 /exp-app/nbproject/private/
+/exp-app/build/
+/exp-app/dist/
+
+.DS_Store
+/tomcat8/logs/*
+/tomcat8/work/*

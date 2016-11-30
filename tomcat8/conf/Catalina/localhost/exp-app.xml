@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" docBase="/Users/Vaibhav/MyHome/workme/repos/expenses/exp-app/build/web" path="/exp-app"/>
+<Context antiJARLocking="true" docBase="../../exp-app/build/web" path="/exp-app"/>
