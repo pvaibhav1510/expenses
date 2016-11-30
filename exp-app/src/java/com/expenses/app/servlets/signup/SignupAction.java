@@ -16,37 +16,38 @@ import com.expenses.app.validators.SignupHelper;
  */
 @WebServlet("/SignupAction")
 public class SignupAction extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
-	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		String passHash = SignupHelper.valodateNEncryptPassword(req);
-		User user = new User().name(req.getParameter("name"))//
-				.email(req.getParameter("email"))//
-				.mobile(req.getParameter("mobile"))//
-				.passHash(passHash);
+    private static final long serialVersionUID = 1L;
 
-		SignupHelper.validateUser(user);
-		// Signup action sends mail
-	}
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        String passHash = SignupHelper.valodateNEncryptPassword(req);
+        User user = new User().name(req.getParameter("name"))//
+                .email(req.getParameter("email"))//
+                .mobile(req.getParameter("mobile"))//
+                .passHash(passHash);
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		service(req, resp);
-	}
+        SignupHelper.validateUser(user);
+        // Signup action sends mail
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		service(req, resp);
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        service(req, resp);
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        service(req, resp);
+    }
 
 }

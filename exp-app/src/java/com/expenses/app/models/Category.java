@@ -9,36 +9,36 @@ import javax.persistence.Table;
 @Table(name = "categories")
 public class Category {
 
-	@Id
-	private Long id;
-	@Column(name = "user_id")
-	private Long userId;
-	private String label;
+    @Id
+    private Long id;
+    @Column(name = "user_id")
+    private Long userId;
+    private String label;
 
-	public Long id() {
-		return id;
-	}
+    public Long id() {
+        return id;
+    }
 
-	public Category id(Long id) {
-		this.id = id;
-		return this;
-	}
+    public Category id(Long id) {
+        this.id = id;
+        return this;
+    }
 
-	public Long userId() {
-		return userId;
-	}
+    public Long userId() {
+        return userId;
+    }
 
-	public Category userId(Long userId) {
-		this.userId = userId;
-		return this;
-	}
+    public Category userId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
 
-	public String label() {
-		return label;
-	}
+    public String label() {
+        return label;
+    }
 
-	public Category label(String label) {
-		this.label = label;
-		return this;
-	}
+    public Category label(String label) {
+        this.label = label;
+        return this;
+    }
 }
